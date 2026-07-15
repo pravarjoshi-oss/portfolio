@@ -1,0 +1,114 @@
+/* Pravar Joshi — portfolio (centered, minimal — modeled on jonathancritchley.ca) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --ink:#191919;
+  --gray:#cccccc;
+  --muted:#8a8a8a;
+  --border:#e6e4e1;
+  --accent:#b23a2f;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:#2f2f2f; background:#fff; line-height:1.6;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+a{color:var(--ink); text-decoration:none}
+img{max-width:100%; height:auto; display:block}
+
+/* ---------- masthead ---------- */
+.masthead{text-align:center; padding:38px 20px 0}
+.masthead h1{font-size:1.7rem; font-weight:700; letter-spacing:.04em; margin:0; color:var(--ink)}
+.toggle{margin-top:1.4em}
+.toggle button{
+  font-family:inherit; font-weight:600; font-size:1rem; border:none; background:#fff;
+  color:var(--gray); margin:4px 16px; cursor:pointer; padding:2px 0; transition:color .15s;
+}
+.toggle button:hover{color:var(--muted)}
+.toggle button.active{color:var(--ink)}
+
+/* ---------- work gallery ---------- */
+.wrap{max-width:1100px; margin:0 auto; padding:14px 20px 0}
+.gallery{display:flex; flex-wrap:wrap; justify-content:center; gap:44px 40px; margin-top:32px}
+.item{width:360px; max-width:100%; text-align:center}
+.item .t{display:inline-block; font-size:1.1rem; font-weight:600; color:var(--ink); margin-bottom:14px; line-height:1.3}
+.item .t:hover{color:var(--muted)}
+.item .ph{display:block; overflow:hidden; border:1px solid var(--border); aspect-ratio:16/9}
+.item .ph img{width:100%; height:100%; object-fit:cover; display:block; transition:opacity .3s ease, transform .6s ease}
+.item .ph:hover img{opacity:.9; transform:scale(1.03)}
+
+/* ---------- about ---------- */
+.about{max-width:660px; margin:8px auto 0; text-align:center}
+.about p{margin:0 0 1em}
+.about .skills{font-size:.94rem; color:#555; margin-top:1.4em}
+.about .skills p{margin:.35em 0}
+.about .skills b{color:var(--ink); font-weight:600}
+
+/* ---------- social ---------- */
+.social{text-align:center; padding:40px 0 48px}
+.social a{display:inline-block; color:var(--ink); margin:0 12px; opacity:.72; transition:opacity .15s}
+.social a:hover{opacity:1}
+.social svg{width:22px; height:22px; fill:currentColor}
+
+/* ---------- detail pages ---------- */
+.detail-top{text-align:center; padding:30px 20px 0}
+.detail-top .home-name{font-size:1.05rem; font-weight:700; letter-spacing:.04em; color:var(--ink)}
+.detail-top .home-link{display:inline-block; font-size:.72rem; color:var(--muted); margin-top:8px; text-transform:uppercase; letter-spacing:.18em}
+.detail-top .home-link:hover{color:var(--ink)}
+
+.doc{max-width:860px; margin:0 auto; padding:26px 20px 0; text-align:center}
+.doc h1{font-size:2rem; font-weight:700; color:var(--ink); margin:.3em 0 .4em; letter-spacing:-0.01em}
+.doc .lead{font-size:1.06rem; color:#555; max-width:660px; margin:0 auto 1.2em; line-height:1.55}
+.doc .btns{margin:1.4em 0 0; display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+.doc .btn{
+  display:inline-block; border:1px solid var(--border); padding:.65em 1.3em; border-radius:4px;
+  font-size:.74rem; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--ink);
+}
+.doc .btn:hover{border-color:var(--ink)}
+.doc .btn.primary{background:var(--ink); color:#fff; border-color:var(--ink)}
+.doc .btn.primary:hover{background:#000}
+
+/* section heading */
+.doc h2.section{
+  font-size:.82rem; text-transform:uppercase; letter-spacing:.16em; font-weight:600; color:var(--muted);
+  margin:2.8em 0 0; padding-bottom:.9em; border-bottom:1px solid var(--border);
+}
+
+/* key highlights panel */
+.panel{margin-top:1.4em; text-align:left}
+.hl{margin-top:2em}
+.hl:first-child{margin-top:1.4em}
+.hl .lbl{display:block; font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; font-weight:600; color:var(--muted); margin-bottom:.7em}
+.hl img, .hl video{width:100%; display:block; border:1px solid var(--border); border-radius:4px; background:#fff}
+
+/* embedded deck */
+.deck{width:100%; height:640px; border:1px solid var(--border); border-radius:6px; margin-top:1.2em; background:#f7f6f4}
+.deck-link{display:inline-block; margin-top:1em; font-size:.74rem; text-transform:uppercase; letter-spacing:.1em; font-weight:600; color:var(--ink); border-bottom:1px solid var(--border); padding-bottom:2px}
+.deck-link:hover{border-color:var(--ink)}
+
+/* readable left-aligned insight prose */
+.doc .prose{max-width:680px; margin:1.1em auto 0; text-align:left; font-size:.96rem; color:#444; line-height:1.62}
+.doc .prose p{margin:0 0 .8em}
+.doc .prose b{color:var(--ink); font-weight:600}
+.doc .poster-link{display:inline-block; margin-top:.9em; font-size:.74rem; text-transform:uppercase; letter-spacing:.1em; font-weight:600; color:var(--ink); border-bottom:1px solid var(--border); padding-bottom:2px}
+.doc .poster-link:hover{border-color:var(--ink)}
+
+.doc .fine{font-size:.8rem; color:var(--muted); margin:2.4em auto 0; max-width:680px; line-height:1.55; text-align:left}
+.doc .fine a{color:var(--ink); border-bottom:1px solid var(--border)}
+
+/* inline award link in lead */
+.lead a{color:var(--ink); border-bottom:1px solid #cfcbc6}
+.lead a:hover{border-color:var(--ink)}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  .doc h1{font-size:1.7rem}
+  .deck{height:500px}
+}
+@media (max-width:520px){
+  .item{width:100%}
+  .masthead h1{font-size:1.45rem}
+  .deck{height:420px}
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hate Crime Analysis | Pravar Joshi</title>
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+  <div class="detail-top">
+    <a class="home-name" href="index.html">PRAVAR JOSHI</a><br>
+    <a class="home-link" href="index.html">Home</a>
+  </div>
+
+  <article class="doc">
+    <h1>Exploratory Analysis of Open-Source Hate Crime Data (TPS)</h1>
+    <p class="lead">Conducted as part of my Research Assistant position at Toronto Metropolitan University with Dr. Evan Cleave. This exploratory analysis of Toronto Police Service open hate-crime data was selected for poster presentation at the Canadian Association of Geographers &ndash; Ontario Division (CAGONT).</p>
+
+    <h2 class="section">Conference Poster</h2>
+    <div class="panel">
+      <div class="hl">
+        <img src="assets/img/hatecrime/poster.jpg" alt="Research poster: Hate Crime in Toronto, a spatial and temporal analysis">
+      </div>
+    </div>
+
+    <h2 class="section">Space-Time Cube Analysis</h2>
+    <div class="prose">
+      <p>A <b>space-time cube</b> bins events into a three-dimensional structure by creating a grid of locations (neighbourhoods in this analysis) stacked across regular time steps (quarterly bins, 2014 to 2024). This allows both where and when incidents occur to be analysed together. <b>Emerging Hot Spot Analysis</b> then applies a Getis-Ord Gi* hot-spot test in every location and time bin, together with a Mann-Kendall trend test along each neighbourhood's time series. Each neighbourhood is classified by how its clustering behaves over time. A <b>New</b> hot spot is significant only in the most recent period, a <b>Consecutive</b> hot spot shows an unbroken run of recent significant periods, a <b>Sporadic</b> hot spot is significant in some periods but not consistently, and <b>No Pattern</b> indicates no statistically significant clustering.</p>
+      <p>I applied this approach on the spatio-temporal hate crime data, since it is more informative than a single static hot-spot map. This approach separates places that are newly rising from those that are persistently or only occasionally hot. It distinguishes problems that are emerging, entrenched, or episodic, which affects how and how urgently to respond.</p>
+    </div>
+
+    <h2 class="section">Evaluating Hotspots Over Time in Toronto Neighbourhoods, Compared to ON-Marg</h2>
+    <div class="prose">
+      <p>The <b>Ontario Marginalization Index (ON-Marg)</b>, developed by Public Health Ontario with the MAP Centre for Urban Health Solutions from the 2021 Census, summarises marginalization across four dimensions. Two are mapped below by dissemination area (more granular than neighbourhoods). <b>Material Resources</b> measures access to and attainment of basic material needs, such as unemployment and not holding a high-school diploma. <b>Racialized &amp; Newcomer Populations</b> measures the share of recent immigrants and residents who identify as a visible minority. Each area is scored in quintiles from 1 (least marginalized) to 5 (most marginalized).</p>
+    </div>
+    <div class="panel">
+      <div class="hl"><span class="lbl">Emerging hot spots of reported hate crime</span><img src="assets/img/hatecrime/hotspots_map.png" alt="Emerging hot spots of reported hate crime in Toronto"></div>
+      <div class="hl"><span class="lbl">ON-Marg: Material Resources (quintile)</span><img src="assets/img/hatecrime/onmarg_material.png" alt="Material Resources marginalization by dissemination area"></div>
+      <div class="hl"><span class="lbl">ON-Marg: Racialized &amp; Newcomer Populations (quintile)</span><img src="assets/img/hatecrime/onmarg_racialized.png" alt="Racialized and Newcomer Populations marginalization by dissemination area"></div>
+    </div>
+
+    <div class="prose">
+      <p><b>Low reported clustering in marginalized areas.</b> Much of Scarborough in the east and parts of the northwest show no significant hate-crime trend, even though both ON-Marg dimensions run high there (dark shading). This likely reflects a gap in reporting. It supports the case for a mixed-methods study of how aware these communities are of what constitutes a hate crime, their propensity to report it, and the factors driving both, including language barriers, precarious immigration status, and trust in police.</p>
+      <p><b>A consecutive belt.</b> The Consecutive hot spots form a near-contiguous belt of west-end neighbourhoods, including South Parkdale, Roncesvalles, High Park-Swansea, Junction-Wallace Emerson, Dufferin Grove, Wychwood, and Humewood-Cedarvale. These neighbourhoods have recorded successive time periods with statistically significant clustering of hate crime, indicating an entrenched pattern that calls for sustained attention.</p>
+      <p><b>New hot spots as early warning.</b> The four New hot spots (Rustic, Pelmo Park-Humberlea, Humber Heights-Westmount, and Ionview) give social-service organizations an opportunity to get on the ground early. This would help determine the causes and frictions behind the recent rise and assess what can quell it before it becomes a regular occurrence.</p>
+      <p><b>Sporadic downtown clustering.</b> The Sporadic hot spots concentrate in the downtown area. Over a multi-year period, this intermittent pattern may reflect episodic drivers, such as protests due to global events, which cause clustering to appear in some periods but not consistently. Further investigation is needed.</p>
+    </div>
+
+    <p class="fine">Data: Toronto Police Service open hate-crime records; Ontario Marginalization Index (ON-Marg) 2021, Public Health Ontario &amp; MAP Centre for Urban Health Solutions. Methods: Emerging Hot Spot Analysis (space-time cube: Getis-Ord Gi* with Mann-Kendall trend) and global spatial autocorrelation (Moran's I &asymp; 0.45, p &lt; 0.001). Reported incidents only; figures are directional and shaped by reporting behaviour.</p>
+  </article>
+
+  <div class="social">
+    <a href="mailto:pravar.joshi@torontomu.ca" aria-label="Email">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.06.5 7.94 6.2L19.94 6H4.06ZM20 7.27l-7.38 5.76a1 1 0 0 1-1.24 0L4 7.27V18h16V7.27Z"/></svg>
+    </a>
+  </div>
+
+</body>
+</html>

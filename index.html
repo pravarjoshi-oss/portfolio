@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pravar Joshi</title>
+<meta name="description" content="Pravar Joshi, cartographer, data scientist, and developer.">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+  <div class="masthead">
+    <h1>PRAVAR JOSHI</h1>
+    <div class="toggle">
+      <button id="btn-work" class="active" type="button">Work</button>
+      <button id="btn-about" type="button">About</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <section id="work">
+      <div class="gallery">
+        <article class="item">
+          <a class="t" href="wastewater.html">Web App Showing Toronto's Wastewater Management</a>
+          <a class="ph" href="wastewater.html">
+            <img src="assets/img/portfolio/wastewater.jpg" alt="Web app showing Toronto's wastewater management">
+          </a>
+        </article>
+        <article class="item">
+          <a class="t" href="scs.html">Spatial Analysis of Closure of Supervised Consumption Sites (SCS) in Toronto</a>
+          <a class="ph" href="scs.html">
+            <img src="assets/img/portfolio/scs_slide12.jpg" alt="Neighbourhood composite Crisis Score choropleth with supervised consumption sites">
+          </a>
+        </article>
+        <article class="item">
+          <a class="t" href="hatecrime.html">Exploratory Analysis of Open Source Hate Crime Data shared by TPS</a>
+          <a class="ph" href="hatecrime.html">
+            <img src="assets/img/portfolio/hatecrime.jpg" alt="Research poster: hate crime in Toronto, a spatial and temporal analysis">
+          </a>
+        </article>
+        <article class="item">
+          <a class="t" href="turtle.html">Advocacy For Protecting Species-At-Risk in Toronto</a>
+          <a class="ph" href="turtle.html">
+            <img src="assets/img/portfolio/turtle.jpg" alt="Web map of turtle nesting activity along the Humber River">
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about" style="display:none">
+      <p>Toronto-based cartographer, data scientist, and developer.</p>
+      <div class="skills">
+        <p><b>Mapping / GIS:</b> ESRI products (ArcGIS Online and Pro), QGIS, Turf.js, Mapbox GL JS</p>
+        <p><b>Software:</b> HTML, CSS, JavaScript</p>
+        <p><b>Data analysis:</b> Python (GeoPandas, Matplotlib), R, Excel</p>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="social">
+    <a href="mailto:pravar.joshi@torontomu.ca" aria-label="Email">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.06.5 7.94 6.2L19.94 6H4.06ZM20 7.27l-7.38 5.76a1 1 0 0 1-1.24 0L4 7.27V18h16V7.27Z"/></svg>
+    </a>
+  </div>
+
+  <script>
+    (function(){
+      var work=document.getElementById('work'), about=document.getElementById('about');
+      var bw=document.getElementById('btn-work'), ba=document.getElementById('btn-about');
+      bw.addEventListener('click',function(){work.style.display='';about.style.display='none';bw.classList.add('active');ba.classList.remove('active');});
+      ba.addEventListener('click',function(){about.style.display='';work.style.display='none';ba.classList.add('active');bw.classList.remove('active');});
+    })();
+  </script>
+
+</body>
+</html>
